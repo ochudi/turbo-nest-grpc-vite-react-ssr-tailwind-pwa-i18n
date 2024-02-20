@@ -1,18 +1,15 @@
-import { Route, Routes } from "react-router-dom"
-import Layout from "./components/Layout"
+import { Route, Routes } from "react-router-dom";
+import Layout from "./components/Layout";
 import Home from "./components/Home";
 import Users from "./components/Users";
-import { ThemeProvider } from "@/components/theme-provider"
-import {
-  QueryClient,
-  QueryClientProvider,
-} from '@tanstack/react-query'
+import { ThemeProvider } from "@/components/theme-provider";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 function App() {
-  const baseUrl = "/";
+  const baseUrl = "/v1";
   //create a react query client at the top
   // Create a client
-  const queryClient = new QueryClient()
+  const queryClient = new QueryClient();
 
   return (
     // Provide the client to your App
@@ -26,7 +23,7 @@ function App() {
         </Routes>
       </ThemeProvider>
     </QueryClientProvider>
-  )
+  );
 }
 
-export default App
+export default App;
